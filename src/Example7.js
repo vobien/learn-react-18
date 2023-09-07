@@ -1,4 +1,5 @@
 import { useRef, useState } from "react"
+import Example8 from "./Example8"
 
 function Example7() {
     const [count, setCount] = useState(0)
@@ -22,6 +23,8 @@ function Example7() {
             <h2 ref={h2Ref}>{count}</h2>
             <button onClick={handleStart}>Start</button>
             <button onClick={handleStop}>Stop</button>
+
+            <Example8 />
         </div>
     )
 }
