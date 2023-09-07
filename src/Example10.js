@@ -1,10 +1,11 @@
-import { useMemo, useState } from "react"
+import { useMemo, useState, useRef } from "react"
 
 function Example10() {
     const [name, setName] = useState('')
     const [price, setPrice] = useState('')
-
     const [products, setProducts] = useState([])
+
+    const nameRef = useRef()
 
     const handleAdd = () => {
         setProducts(prev => [
@@ -14,6 +15,10 @@ function Example10() {
                 price: +price
             }
         ])
+
+        setName('')
+        setPrice('')
+        nameRef.current.focus()
     }
 
     const total = useMemo(() => {
@@ -27,7 +32,7 @@ function Example10() {
     
     return (
         <div>
-            <input placeholder="product name"
+            <input ref={nameRef} placeholder="product name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
