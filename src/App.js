@@ -12,6 +12,7 @@ import Example11 from "./Example11";
 import Example12 from "./Example12";
 import Example13 from "./Example13"
 import "./App.css"
+import Example14 from "./Example14";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
       {/* <Example10 /> */}
       {/* <Example11 /> */}
       {/* <Example12 /> */}
-      <Example13 />
+      {/* <Example13 /> */}
+      <Example14 />
     </div>
   );
 }
